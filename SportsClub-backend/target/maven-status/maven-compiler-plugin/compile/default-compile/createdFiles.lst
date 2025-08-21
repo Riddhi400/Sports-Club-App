@@ -1,0 +1,13 @@
+com\example\sportsclub\MemberRepository.class
+com\example\sportsclub\MemberService.class
+com\example\sportsclub\SportsClubBackendApplication.class
+com\example\sportsclub\MemberController.class
+com\example\sportsclub\Payment.class
+com\example\sportsclub\EventService.class
+com\example\sportsclub\Member.class
+com\example\sportsclub\PaymentRepository.class
+com\example\sportsclub\EventRepository.class
+com\example\sportsclub\Event.class
+com\example\sportsclub\PaymentController.class
+com\example\sportsclub\PaymentService.class
+com\example\sportsclub\EventController.class
