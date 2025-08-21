@@ -1,0 +1,32 @@
+<h2>Events</h2>
+
+<!-- Form to add new event -->
+<div class="event-form">
+  <input [(ngModel)]="newEvent.name" placeholder="Event Name" />
+  <input [(ngModel)]="newEvent.date" type="date" />
+  <input [(ngModel)]="newEvent.location" placeholder="Location" />
+  <input [(ngModel)]="newEvent.description" placeholder="Description" />
+  <button (click)="addEvent()">Add Event</button>
+</div>
+
+<!-- Event list -->
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Date</th>
+      <th>Location</th>
+      <th>Description</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let event of events; let i = index">
+      <td>{{ event.name }}</td>
+      <td>{{ event.date }}</td>
+      <td>{{ event.location }}</td>
+      <td>{{ event.description }}</td>
+      <td><button (click)="deleteEvent(i)">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
