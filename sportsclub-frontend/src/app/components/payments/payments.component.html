@@ -1,0 +1,27 @@
+<h2>Payments</h2>
+
+<div class="payment-form">
+  <input [(ngModel)]="newPayment.member" placeholder="Member Name" />
+  <input [(ngModel)]="newPayment.amount" type="number" placeholder="Amount" />
+  <input [(ngModel)]="newPayment.date" type="date" />
+  <button (click)="addPayment()">Add Payment</button>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Member</th>
+      <th>Amount</th>
+      <th>Date</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let payment of payments; let i = index">
+      <td>{{ payment.member }}</td>
+      <td>{{ payment.amount }}</td>
+      <td>{{ payment.date }}</td>
+      <td><button (click)="deletePayment(i)">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
