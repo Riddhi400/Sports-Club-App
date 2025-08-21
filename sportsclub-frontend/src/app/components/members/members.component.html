@@ -1,0 +1,27 @@
+<h2>Members</h2>
+
+<div class="member-form">
+  <input [(ngModel)]="newMember.name" placeholder="Name" />
+  <input [(ngModel)]="newMember.email" placeholder="Email" />
+  <input [(ngModel)]="newMember.phone" type="Phone" />
+  <button (click)="addMember()">Add Member</button>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let member of members; let i = index">
+      <td>{{ member.name }}</td>
+      <td>{{ member.email }}</td>
+      <td>{{ member.phone }}</td>
+      <td><button (click)="deleteMember(i)">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
